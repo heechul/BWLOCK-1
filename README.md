@@ -53,7 +53,7 @@ bw_lock()/bw_unlock().
 ```
   #include "bwlock.h"
   // register the current process (syscall)
-  bwlock_register (getpid());
+  bw_register (getpid());
   
   // request the bwlock (library call, not syscall)
   bw_lock()
@@ -64,7 +64,7 @@ bw_lock()/bw_unlock().
   bw_unlock()
   
   // unregister the current process (syscall)
-  bwlock_unregister();
+  bw_unregister();
 
 ```
 
